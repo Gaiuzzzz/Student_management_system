@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management Portal</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #222;
+        }
+
+        /* Navigation bar */
+
+        nav {
+            background-color: #1f2937;
+            padding: 20px 50px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+
+        /* Hero section */
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: white;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+
+        /* Buttons */
+
+        .button {
+            display: inline-block;
+
+            padding: 14px 25px;
+
+            margin: 10px;
+
+            border-radius: 6px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+        .signup {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        .login {
+            background-color: #16a34a;
+            color: white;
+        }
+
+        .students {
+            background-color: #374151;
+            color: white;
+        }
+
+
+        /* Features */
+
+        .features {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 30px;
+
+            padding: 60px 30px;
+        }
+
+        .card {
+            background-color: white;
+
+            width: 280px;
+
+            padding: 30px;
+
+            text-align: center;
+
+            border-radius: 10px;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+
+            padding: 25px;
+
+            background-color: #1f2937;
+
+            color: white;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <div class="logo">
+            Student Portal
+        </div>
+
+        <div>
+
+            <a href="{% url 'home' %}">
+                Home
+            </a>
+
+            <a href="{% url 'signup' %}">
+                Sign Up
+            </a>
+
+            <a href="{% url 'login' %}">
+                Login
+            </a>
+
+            <a href="{% url 'student_list' %}">
+                Students
+            </a>
+
+            <a href="{% url 'dashboard' %}">
+                Dashboard
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <h1>
+            Student Management Portal
+        </h1>
+
+        <p>
+            Manage your student account, profile and academic information.
+        </p>
+
+
+        <a href="{% url 'signup' %}" class="button signup">
+            Create Account
+        </a>
+
+        <a href="{% url 'login' %}" class="button login">
+            Student Login
+        </a>
+
+        <a href="{% url 'student_list' %}" class="button students">
+            View Students
+        </a>
+
+    </section>
+
+
+    <!-- Features -->
+
+    <section class="features">
+
+
+        <div class="card">
+
+            <h2>
+                👤 Student Account
+            </h2>
+
+            <p>
+                Create your own student account and securely login to the portal.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>
+                📊 Dashboard
+            </h2>
+
+            <p>
+                Access your personal student dashboard after logging in.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>
+                🎓 Student Information
+            </h2>
+
+            <p>
+                View and manage student information through the system.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Student Management System
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
